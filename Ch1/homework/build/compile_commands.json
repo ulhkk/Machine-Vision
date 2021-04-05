@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/build",
+  "command": "/usr/bin/g++-7   -I/usr/local/include/opencv4 -I/home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/include  -o2 -g   -std=gnu++11 -o CMakeFiles/k_means.dir/src/k_means.cpp.o -c /home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/src/k_means.cpp",
+  "file": "/home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/src/k_means.cpp"
+},
+{
+  "directory": "/home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/build",
+  "command": "/usr/bin/g++-7   -isystem /usr/local/include/opencv4 -I/home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/include  -o2 -g   -std=gnu++11 -o CMakeFiles/test_k_means.dir/src/test_k_means.cpp.o -c /home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/src/test_k_means.cpp",
+  "file": "/home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/src/test_k_means.cpp"
+}
+]

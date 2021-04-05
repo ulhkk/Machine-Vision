@@ -1,0 +1,2 @@
+/usr/bin/ar qc libk_means.a  CMakeFiles/k_means.dir/src/k_means.cpp.o
+/usr/bin/ranlib libk_means.a
