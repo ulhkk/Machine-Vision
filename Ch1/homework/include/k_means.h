@@ -27,14 +27,15 @@ struct Center {
  *
  */
 class Kmeans {
-   public:
+
+public:
     Kmeans(cv::Mat img, const int k);
 
     std::vector<Sample> get_result_samples() const;
     std::vector<Center> get_result_centers() const;
     void run(int max_iteration, float smallest_convergence_rate);
 
-   private:
+private:
     void initialize_centers();
     void update_labels();
     void update_centers();

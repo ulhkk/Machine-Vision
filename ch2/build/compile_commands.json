@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/build",
+  "command": "/usr/bin/g++-7   -I/usr/include/eigen3 -isystem /usr/local/include/opencv4 -I/home/gfeng/gfeng_ws/Machine-Vision/ch2/include  -Wall -Wextra -g   -std=gnu++14 -o CMakeFiles/snake.dir/src/snake.cpp.o -c /home/gfeng/gfeng_ws/Machine-Vision/ch2/src/snake.cpp",
+  "file": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/src/snake.cpp"
+},
+{
+  "directory": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/build",
+  "command": "/usr/bin/g++-7   -I/usr/include/eigen3 -I/usr/local/include/opencv4 -I/home/gfeng/gfeng_ws/Machine-Vision/ch2/include  -Wall -Wextra -g   -std=gnu++14 -o CMakeFiles/grad_des_base.dir/src/gradient_descent_base.cpp.o -c /home/gfeng/gfeng_ws/Machine-Vision/ch2/src/gradient_descent_base.cpp",
+  "file": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/src/gradient_descent_base.cpp"
+},
+{
+  "directory": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/build",
+  "command": "/usr/bin/g++-7   -I/usr/include/eigen3 -isystem /usr/local/include/opencv4 -I/home/gfeng/gfeng_ws/Machine-Vision/ch2/include  -Wall -Wextra -g   -std=gnu++14 -o CMakeFiles/test_gvf.dir/src/test_gvf.cpp.o -c /home/gfeng/gfeng_ws/Machine-Vision/ch2/src/test_gvf.cpp",
+  "file": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/src/test_gvf.cpp"
+},
+{
+  "directory": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/build",
+  "command": "/usr/bin/g++-7   -I/usr/include/eigen3 -isystem /usr/local/include/opencv4 -I/home/gfeng/gfeng_ws/Machine-Vision/ch2/include  -Wall -Wextra -g   -std=gnu++14 -o CMakeFiles/display.dir/src/display.cpp.o -c /home/gfeng/gfeng_ws/Machine-Vision/ch2/src/display.cpp",
+  "file": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/src/display.cpp"
+},
+{
+  "directory": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/build",
+  "command": "/usr/bin/g++-7   -I/usr/include/eigen3 -isystem /usr/local/include/opencv4 -I/home/gfeng/gfeng_ws/Machine-Vision/ch2/include  -Wall -Wextra -g   -std=gnu++14 -o CMakeFiles/gvf.dir/src/gvf.cpp.o -c /home/gfeng/gfeng_ws/Machine-Vision/ch2/src/gvf.cpp",
+  "file": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/src/gvf.cpp"
+},
+{
+  "directory": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/build",
+  "command": "/usr/bin/g++-7   -I/usr/include/eigen3 -isystem /usr/local/include/opencv4 -I/home/gfeng/gfeng_ws/Machine-Vision/ch2/include  -Wall -Wextra -g   -std=gnu++14 -o CMakeFiles/test_snake.dir/src/test_snake.cpp.o -c /home/gfeng/gfeng_ws/Machine-Vision/ch2/src/test_snake.cpp",
+  "file": "/home/gfeng/gfeng_ws/Machine-Vision/ch2/src/test_snake.cpp"
+}
+]

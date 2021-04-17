@@ -1,6 +1,7 @@
 #include "k_means.h"
 #include <algorithm>
 #include <vector>
+#include <iostream>
 
 // to generate random number
 static std::random_device rd;
@@ -68,6 +69,14 @@ void Kmeans::initialize_centers() {
 void Kmeans::update_labels() {
     for (Sample& sample : samples_) {
         // TODO update labels of each feature
+        float minDist = std::numeric_limits<float>::max();
+        for(int i = 0; i< centers_.size();i++){
+            float curDist = calc_square_distance(sample.feature_, centers_[i].feature_);
+            if(curDist < minDist){
+                minDist = curDist;
+                sample.label_ = i;
+            }
+        }
     }
 }
 
@@ -78,8 +87,21 @@ void Kmeans::update_labels() {
 void Kmeans::update_centers() {
     // backup centers of last iteration
     last_centers_ = centers_;
+    for(int i = 0; i < centers_.size();i++){
+        centers_[i] = {0.0f,0.0f,0.0f};
+    }
     // calculate the mean value of feature vectors in each cluster
     // TODO complete update centers functions.
+    std::vector<int> clusterSize_(centers_.size(),0);
+    for (int i = 0;i < samples_.size(); i++){
+        clusterSize_[samples_[i].label_]++;
+    }
+    
+    for(int i = 0; i < samples_.size(); i++){
+        for(int k = 0; k < 3; k++){
+            centers_[samples_[i].label_].feature_[k] += samples_[i].feature_[k] / clusterSize_[samples_[i].label_];           
+        }
+    }
 }
 
 /**
@@ -97,7 +119,8 @@ bool Kmeans::is_terminate(int current_iter, int max_iteration,
     // TODO Write a terminate function.
     // helper funtion: check_convergence(const std::vector<Center>&
     // current_centers, const std::vector<Center>& last_centers)
-
+    float cur_radius = check_convergence(centers_, last_centers_);
+    if(cur_radius > smallest_convergence_radius && current_iter < max_iteration) return false;
     return true;
 }
 

@@ -3,7 +3,7 @@
 #include <opencv2/highgui/highgui.hpp>
 
 int main(int argc, char** argv) {
-    cv::Mat img = cv::imread(argv[1], CV_LOAD_IMAGE_COLOR);
+    cv::Mat img = cv::imread(argv[1], cv::IMREAD_COLOR);
 
     if (img.empty()) {
         std::cerr << "useage: ./test_k_means input_image_path k iteration\n "
@@ -19,9 +19,9 @@ int main(int argc, char** argv) {
     }
 
     int k = strtol(argv[2], NULL, 10);
-    int iteration = strtol(argv[3], NULL, 10);
+    int iteration = strtol(argv[3], NULL, 10);//convert string to long integer
 
-    int convergence_radius = 1e-6;
+    double convergence_radius = 1e-6;
 
     Kmeans kmeans(img, k);
     kmeans.run(iteration, convergence_radius);
