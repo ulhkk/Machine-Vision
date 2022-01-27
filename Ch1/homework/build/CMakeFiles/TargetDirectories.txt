@@ -1,4 +1,0 @@
-/home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/build/CMakeFiles/rebuild_cache.dir
-/home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/build/CMakeFiles/edit_cache.dir
-/home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/build/CMakeFiles/k_means.dir
-/home/gfeng/gfeng_ws/Machine-Vision/Ch1/homework/build/CMakeFiles/test_k_means.dir

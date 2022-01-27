@@ -1,2 +1,0 @@
-/usr/bin/ar qc libgvf.a  CMakeFiles/gvf.dir/src/gvf.cpp.o
-/usr/bin/ranlib libgvf.a
