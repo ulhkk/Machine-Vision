@@ -67,7 +67,7 @@ def run_epoch(data_loader, model, mode, learning_rate, weight_decay, use_tqdm = 
         cloud, label = data
 
        # cloud = cloud.permute(0,2,1)
-        if(cloud.size() == torch.Size([0,0,0]) or cloud.size() == torch.Size([0,0]) or list(cloud.size())[2] <= 1 ): continue
+        #if(cloud.size() == torch.Size([0,0,0]) or cloud.size() == torch.Size([0,0]) or list(cloud.size())[2] <= 1 ): continue
         if torch.cuda.is_available():
             cloud, label = cloud.cuda(), label.cuda()
         
@@ -102,7 +102,7 @@ def run_epoch(data_loader, model, mode, learning_rate, weight_decay, use_tqdm = 
 def train(args):
     path = Path(args.root_dir)
 
-    train_loader = load_data(path, data_mode='Train',batch_size=args.batch_size, data_augumentation=True)
+    train_loader = load_data(path, data_mode='Train',batch_size=args.batch_size, data_augumentation=False)
     print("--------training data loaded-------")
     val_loader = load_data(path, data_mode='Validation', batch_size=args.batch_size, data_augumentation=False)
     print("--------validation data loaded-------")

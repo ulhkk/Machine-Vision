@@ -48,14 +48,9 @@ class PointCloudData(torch.utils.data.Dataset):
             #label
             with open(label_path, 'r') as f:
                 content_as_dict = yaml.safe_load(f.read())
-                yaw = content_as_dict['Dim_x']
-                if(yaw < 0): yaw = -yaw
-                if yaw > 5:
-                    self.labels_.append(1)
-                else:
-                    self.labels_.append(2)
-                #self.labels_.append(int(np.float32(yaw)))
-        print('stop herer')
+                yaw = content_as_dict['Yaw']
+                self.labels_.append(np.float32(yaw))
+        print('checkpoint here')
         # self.points_ = self.points_[:1000]
         # self.labels_ = self.labels_[:1000]
 
@@ -75,15 +70,14 @@ class PointCloudData(torch.utils.data.Dataset):
             # elif yaw < - np.pi :
             #     yaw = yaw + 2 * np.pi
     
-        #yaw = int(np.float32(yaw * 180 / math.pi / 10)) + 18
+        yaw = int(np.float32(yaw * 180 / math.pi / 10)) + 18
 
         if num >= self.num_points_:
             selected_points_idx = np.random.choice(np.arange(0, num), self.num_points_, replace=False)
-            cloud = cloud[selected_points_idx]
         else:
             selected_points_idx = np.random.choice(np.arange(0, num), self.num_points_, replace=True)
-            cloud = cloud[selected_points_idx]
-            #cloud = np.pad(cloud, ((0,self.num_points_ - num),(0,0)),'constant', constant_values = 0)
+        cloud = cloud[selected_points_idx]   
+         #cloud = np.pad(cloud, ((0,self.num_points_ - num),(0,0)),'constant', constant_values = 0)
 
         return cloud.T, yaw
 
